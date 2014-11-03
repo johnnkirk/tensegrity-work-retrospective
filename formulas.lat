@@ -1,0 +1,148 @@
+% file:  notes.lat            --   derived from ../doublesphere/notes.lat
+
+\setlength{\voffset}{0mm}
+% {17.5mm}
+\setlength{\hoffset}{0mm}
+
+\documentclass[letterpaper]{article}
+% \documentclass[12pt]{article}
+% \usepackage{ifthen}
+\usepackage{fancyhdr}
+
+\pagenumbering{arabic}
+% \nofiles
+
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-2.9in}
+
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{1in}
+% \setlength{\topskip}{0pt}
+
+\setlength{\textheight}{7.5in}
+% \setlength{\textheight}{\paperheight}
+% \addtolength{\textheight}{-2in}
+
+\setlength{\oddsidemargin}{0.5in}
+\setlength{\evensidemargin}{0pt}
+\setlength{\marginparwidth}{1in}
+\setlength{\marginparsep}{0pt}
+
+\setlength{\footskip}{30pt}
+\setlength{\parskip}{10pt}
+\setlength{\parindent}{0pt}
+
+% these can only be set in a \newenvironment
+% \setlength{\topsep}{0pt}
+% \setlength{\partopsep}{0pt}
+% \setlength{\parsep}{3pt}
+% \setlength{\itemsep}{3pt}
+% \renewcommand{\baselinestretch}{1.5}
+% \setlength{\leftmargin}{}
+% \setlength{\rightmargin}{}
+% \setlength{\listparindent}{}
+% \setlength{\labelwidth}{}
+% \setlength{\labelsep}{}
+% \setlength{\itemindent}{}
+
+% \setlength{\footrulewidth}{.4pt}
+\renewcommand{\footrulewidth}{.4pt}
+
+% \pagestyle{empty}
+\pagestyle{fancy}
+
+\lhead[even]{\footnotesize (267) 882-7777}
+\chead[even]{\footnotesize\textbf{John Kirk}}
+\rhead[even]{\footnotesize $<$johnnkirk@gmail.com$>$}
+\lfoot[even]{\footnotesize July 20, 2014}
+\cfoot[even]{\footnotesize John Kirk}
+\rfoot[even]{\textbf{\small Page \thepage\ of 1}}
+
+% \newfont{dunmagele}{cmdunh10 scaled 7430}
+% \newfont{dunmagten}{cmdunh10 scaled 6191}
+% \newfont{dunmagnin}{cmdunh10 scaled 5160}
+% \newfont{dunmageig}{cmdunh10 scaled 4300}
+% \newfont{dunmagsev}{cmdunh10 scaled 3583}
+% \newfont{dunmagsix}{cmdunh10 scaled 2986}
+% \newfont{dunmagfiv}{cmdunh10 scaled 2488}
+% \newfont{dunmagfou}{cmdunh10 scaled 2074)
+
+\newenvironment{items}{\begin{list}{$\circ$}{%
+  \setlength{\itemsep}{0ex}
+  \setlength{parsep}{0ex}
+  \setlength{topsep}{-ex}
+  }}{\end{list}}
+
+\newenvironment{itemlist}{\begin{list}{$\bullet$}{
+  % these can only be set in a \newenvironment
+  \setlength{\topsep}{2pt}
+  \setlength{\partopsep}{0pt}
+  \setlength{\parsep}{4pt}
+  \setlength{\itemsep}{0pt}
+  \setlength{\leftmargin}{20pt}
+  % \setlength{\rightmargin}{0pt}
+  \setlength{\listparindent}{8pt}
+  % \setlength{\labelwidth}{0pt}
+  % \setlength{\labelsep}{0pt}
+  % \setlength{\itemindent}{0pt}
+  }}{\end{list}}
+
+\newcommand{\subhead}[1]{{\setlength{\parindent}{0pt}
+                          \bigskip\textbf{#1}\par}}
+
+\newcommand{\subfoot}[1]{{\setlength{\parindent}{0pt}
+                          \medskip\footnotesize\textbf{#1}\par}}
+
+\begin{document}
+\vspace*{-0.75in}
+\centerline{\bfseries\Large Formulas for Single-Layer Tensegrity Structures}
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+\centerline{\bfseries\large Six-strut Tensegrity (Tetrahedral)}
+\bigskip
+\bigskip
+for strut length 2:
+\bigskip
+\begin{eqnarray*}
+  d     & = & \frac{4\sin^2{\phi}-1+\sqrt{1+8(1-2\sin^2{\phi})^2}}{4\cos{\phi}}\\
+                                                                               \\
+                                                                               \\
+  short & = & \sqrt{2}\sqrt{d^2-d(\cos{\phi}+\sin{\phi})-\cos{\phi}\sin{\phi}+1}\\
+                                                                               \\
+                                                                               \\
+  long  & = & \sqrt{2}\sqrt{d^2-d(\cos{\phi}-\sin{\phi})+\cos{\phi}\sin{\phi}+1}
+  \end{eqnarray*}
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\centerline{\bfseries\large Twelve-strut Tensegrity (Octahedral)}
+\bigskip
+for strut length 2:
+\bigskip
+\begin{eqnarray*}
+  d     & = & \frac{\frac{\sqrt{2}}{2}-\sin{\phi}\cos{\phi}\pm\sqrt{4\sin^2{\phi}\cos^2{\phi}+\frac{1}{2}}}
+                   {\cos{\phi}+\sqrt{2}\sin{\phi}}\\
+                                                  \\
+                                                  \\
+  short & = & \sqrt{d^2-2\sqrt{2}d\cos{\phi}-\cos^2{\phi}+3}\\
+                                                            \\
+                                                            \\
+  long  & = & \sqrt{d^2-2d\sin{\phi}+\cos^2{\phi}+1}
+  \end{eqnarray*}
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\strut\vspace{0.75in}\hspace{0.5in} --- John Kirk
+\end{document}

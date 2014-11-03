@@ -1,0 +1,170 @@
+% file:  threestrut.lat            --   derived from notes.lat.lat
+
+\setlength{\voffset}{0mm}
+% {17.5mm}
+\setlength{\hoffset}{0mm}
+
+\documentclass[letterpaper]{article}
+% \documentclass[12pt]{article}
+% \usepackage{ifthen}
+\usepackage{fancyhdr}
+
+\pagenumbering{arabic}
+% \nofiles
+
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-2in}
+
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{1in}
+% \setlength{\topskip}{0pt}
+
+\setlength{\textheight}{7.5in}
+% \setlength{\textheight}{\paperheight}
+% \addtolength{\textheight}{-2in}
+
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0pt}
+\setlength{\marginparwidth}{1in}
+\setlength{\marginparsep}{0pt}
+
+\setlength{\footskip}{30pt}
+\setlength{\parskip}{10pt}
+\setlength{\parindent}{0pt}
+
+% these can only be set in a \newenvironment
+% \setlength{\topsep}{0pt}
+% \setlength{\partopsep}{0pt}
+% \setlength{\parsep}{3pt}
+% \setlength{\itemsep}{3pt}
+% \renewcommand{\baselinestretch}{1.5}
+% \setlength{\leftmargin}{}
+% \setlength{\rightmargin}{}
+% \setlength{\listparindent}{}
+% \setlength{\labelwidth}{}
+% \setlength{\labelsep}{}
+% \setlength{\itemindent}{}
+
+% \setlength{\footrulewidth}{.4pt}
+\renewcommand{\footrulewidth}{.4pt}
+
+% \pagestyle{empty}
+\pagestyle{fancy}
+
+\lhead[even]{\footnotesize (267) 882-7777}
+\chead[even]{\footnotesize\textbf{John Kirk}}
+\rhead[even]{\footnotesize $<$johnnkirk@gmail.com$>$}
+\lfoot[even]{\footnotesize July 20, 2014}
+\cfoot[even]{\footnotesize John Kirk}
+\rfoot[even]{\textbf{\small Page \thepage\ of 2}}
+
+% \newfont{dunmagele}{cmdunh10 scaled 7430}
+% \newfont{dunmagten}{cmdunh10 scaled 6191}
+% \newfont{dunmagnin}{cmdunh10 scaled 5160}
+% \newfont{dunmageig}{cmdunh10 scaled 4300}
+% \newfont{dunmagsev}{cmdunh10 scaled 3583}
+% \newfont{dunmagsix}{cmdunh10 scaled 2986}
+% \newfont{dunmagfiv}{cmdunh10 scaled 2488}
+% \newfont{dunmagfou}{cmdunh10 scaled 2074)
+
+\newenvironment{items}{\begin{list}{$\circ$}{%
+  \setlength{\itemsep}{0ex}
+  \setlength{parsep}{0ex}
+  \setlength{topsep}{-ex}
+  }}{\end{list}}
+
+\newenvironment{itemlist}{\begin{list}{$\bullet$}{
+  % these can only be set in a \newenvironment
+  \setlength{\topsep}{2pt}
+  \setlength{\partopsep}{0pt}
+  \setlength{\parsep}{4pt}
+  \setlength{\itemsep}{0pt}
+  \setlength{\leftmargin}{20pt}
+  % \setlength{\rightmargin}{0pt}
+  \setlength{\listparindent}{8pt}
+  % \setlength{\labelwidth}{0pt}
+  % \setlength{\labelsep}{0pt}
+  % \setlength{\itemindent}{0pt}
+  }}{\end{list}}
+
+\newcommand{\subhead}[1]{{\setlength{\parindent}{0pt}
+                          \bigskip\textbf{#1}\par}}
+
+\newcommand{\subfoot}[1]{{\setlength{\parindent}{0pt}
+                          \medskip\footnotesize\textbf{#1}\par}}
+
+\begin{document}
+\vspace*{-0.75in}
+\centerline{\bfseries\Large Three Strut Thoughts}
+\bigskip
+\bigskip
+% \hfill\begin{minipage}{2in}\normalsize
+% John Kirk\\
+% % Dystan Hays Studios\\
+% 3579 E Foothill Bl. \#246\\
+% Pasadena,\quad CA\quad  91107\\
+% \\
+% June 30, 2014\\
+% \end{minipage}
+% 
+% John Young $<$john@tikaro.net$>$\\
+% Tikaro Inc\\
+% 16 West Gay Street\\
+% West Chester,\quad PA\quad 19380\\
+
+  We can imagine two equilateral triangles of identical dimensions in three-dimensional
+space, in planes parallel to each other, and with centers on a single axis orthogonal to
+both triangles.  If a vertex of each triangle is associated with one of the other, so
+that the line connecting them is parallel to the axis between triangle centers, and
+lines are imagined connecting all three pairs of such vertices, we will have a shape
+known as a triangular prism.  We can assume, for visualization concreteness, that the
+distance between the two triangles is on the order of two or three times the edge length
+of the triangles.
+
+  Now, we can imagine holding one triangle fixed and rotating the other triangle clockwise
+(looking toward the fixed triangle) on the common axis, while allowing the lines connecting
+the two triangles to move keeping their connectivity the same.  When the rotation reaches
+one hundred twenty degrees, the two triangles will align in the way they did at the
+beginning, but the lines between them will trace diagonals of the shape of the original prism.
+If we continue rotating the triangles from one hundred twenty degrees to one hundred eighty
+degrees, the lines connecting them will intersect at that point.  Continuing the rotation
+further would result in a configuration identical to a rotation in the opposite direction
+through one hundred eighty degrees, progressing down through one hundred twenty degrees and
+then further to zero, so we can think of this further rotation beyond one hundred eighty
+degrees of no interest.
+
+  Now it is interesting to consider only the rotation beyond one hundred twenty degrees, and
+less than one hundred eighty degrees, as well as thinking of the size of the moving triangle
+changing from equal to the fixed triangle progressively smaller down to, but never equalling
+zero.  Also, it's interesting to consider the distance between the two triangles moving from
+any value greater than zero up to any finitely large value.
+
+  We now have in mind a model for a structure that can be parameterized by three parameters,
+one for the rotation, one for the distance between the triangles, and one for the relative
+size of the moving triangle.  We can think of the distance between the triangles as being
+relative to the edge length of the fixed triangle, thinking of that as unit length.
+
+  This abstract model can be thought of as instructive as we imagine constructing something
+similar in the real world using real materials.  In the real world, the struts and cables
+will have non-zero thickness that will limit how close to the ends of the ranges several
+parameters may come, before interfering with each other or before force equilibrium is
+threatened by three or more forces becoming close to co-planar and, thus, possibly
+reversing the direction of their effects due to stretch of component materials.
+
+  The rotation parameter will not become of interest, as long as it is kept near the middle
+of its allowed range.  As a result, we have a two-parameter model.  Examination of this
+two-dimensional space of possibilities, we will see a large middle ground where structures
+can be characterized as primarily volumetric.  These will range between roughly cylindrical
+and roughly pyramidal, as the difference between sizes of the two triangles range from small
+to large.  At the extremes of the ratio of distance between the cylinder-end triangles to
+the size of the triangles, we see either a mostly one-dimensional structure (long and thin),
+or a mostly two-dimensional structure (wide and flat).  In this latter case, we will see two
+extremes of shape along with a middle ground.  The middle ground will resemble a hexagon of
+cables, cross-trussed with a triangular shape of struts.  At the extremes, we'll see a
+triangle of cables, with either a comparable triangle of struts or a three-pointed star
+shape of struts within the triangle.
+
+\bigskip
+\strut\vspace{0.75in}\hspace{0.5in} --- John Kirk
+\end{document}
